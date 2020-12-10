@@ -7,8 +7,8 @@ var arr = [10]int{9, 3, 2, 8, 7, 5, 0, 1, 6, 4}
 func main() {
 	fmt.Printf("Sorting Collection %v\n", arr)
 	for i := len(arr) - 1; i > 1; i-- {
+		fmt.Printf("Iterating Outer over %v \n", i)
 		for j := 0; j < i; j++ {
-			fmt.Printf("Iterating Outer over %v \n", i)
 			fmt.Printf("Iterating Inner over %v \n", j)
 			fmt.Printf("Comparing left %v - %v right %v - %v \n", arr[j], j, arr[j+1], j+1)
 			if arr[j] > arr[j+1] {

@@ -5,6 +5,11 @@ import "fmt"
 var arr = [10]int{9, 3, 2, 8, 7, 5, 0, 1, 6, 4}
 
 func main() {
+	// sortV1()
+	sortV2()
+}
+
+func sortV1() {
 	fmt.Printf("Sorting Collection %v\n", arr)
 	for i := len(arr) - 1; i > 1; i-- {
 		fmt.Printf("Iterating Outer over %v \n", i)
@@ -20,6 +25,19 @@ func main() {
 	}
 
 	fmt.Printf("Collection %v", arr)
+}
+
+func sortV2() {
+	n := len(arr)
+
+	for i := 0; i < n; i++ {
+		for j := 0; j < n-1; j++ {
+			if arr[j] > arr[j+1] {
+				swap(j, j+1)
+			}
+		}
+	}
+	fmt.Printf("Sorter %v", arr)
 }
 
 func swap(left, right int) {

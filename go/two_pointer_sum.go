@@ -55,6 +55,7 @@ func medium() {
 
 			if sum == target {
 				fmt.Printf("Three Number Combination of %v is %v, %v and %v \n", x, collection[j], collection[rightPointer], v)
+				break
 			} else {
 				leftPointer++
 			}
